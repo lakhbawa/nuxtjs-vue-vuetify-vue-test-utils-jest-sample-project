@@ -1,10 +1,25 @@
-# game-store-fresh
+# Setup for Nuxtjs Vue Vuetify Jest
+
+This is sample project having setup of Jest, Vuetify, NuxtJS/Nuxt Typescript, Vue
+
+It can test server side rendering as well
+
+\$ make sure to add .nuxt-build-jest in your .gitignore file
 
 ## Build Setup
 
 ```bash
 # install dependencies
 $ npm install
+
+# Running The Tests
+$ npm run test
+
+# Folders and Files to Look For
+* package.json
+* jest.config.js
+* jest.setup.js
+* tests/*
 
 # serve with hot reload at localhost:3000
 $ npm run dev
