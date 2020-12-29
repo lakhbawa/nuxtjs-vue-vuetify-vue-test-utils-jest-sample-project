@@ -1,8 +1,8 @@
 import Vue from 'vue'
-import Vuetify from 'vuetify'
+// import Vuetify from 'vuetify'
 import { config } from '@vue/test-utils'
 
-Vue.use(Vuetify)
+Vue.config.silent = true
 
 // Vue.config.ignoredElements = ['nuxt-link']
 // Mock Nuxt components
