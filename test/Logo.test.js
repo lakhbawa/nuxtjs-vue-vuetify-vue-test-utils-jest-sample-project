@@ -1,6 +1,9 @@
 // import { shallowMount } from '@vue/test-utils'
 import Logo from '@/components/Logo.vue'
 import VuetifyLogo from '@/components/VuetifyLogo'
+import GlobalModuleUsage from '@/components/GlobalModuleUsage'
+
+import helpers from '~/utils/GeneralHelpers'
 
 export const addVuetify = (context) => {
   context.vuetify = require('vuetify')
@@ -12,6 +15,12 @@ export const addVuetify = (context) => {
 export const addVuex = (context) => {
   context.vuex = require('vuex')
   context.vue.use(context.vuex)
+}
+
+export const addHelpers = () => {
+  return (context) => {
+    context.vue.prototype.$helpers = helpers
+  }
 }
 
 export const addI18n = (options) => {
@@ -66,7 +75,7 @@ describe('Logo', () => {
 
   beforeEach(() => {
     vueContext = bootstrapVueContext(
-      compositeConfiguration(addVuex, addVuetify)
+      compositeConfiguration(addVuex, addVuetify, addHelpers())
     )
   })
 
@@ -90,5 +99,14 @@ describe('Logo', () => {
     })
 
     expect(wrapper.text()).toMatch('Logo')
+  })
+
+  test('Test Global Variables', () => {
+    const wrapper = vueContext.vueTestUtils.shallowMount(GlobalModuleUsage, {
+      localVue: vueContext.vue,
+      vuetify: vueContext.vuetifyInstance
+    })
+
+    expect(wrapper.text()).toMatch('91')
   })
 })
