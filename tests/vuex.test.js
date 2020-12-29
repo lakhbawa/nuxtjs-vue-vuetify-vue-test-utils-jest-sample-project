@@ -1,13 +1,8 @@
 import _ from 'lodash'
-import Vuex from 'vuex'
-import { createLocalVue } from '@vue/test-utils'
-const buildDir = '.nuxt-build-jest'
-
+const buildDir = '~/.nuxt-build-jest'
 describe('store/movies', () => {
 // ----------------------------------------------------
 // focus on the code from here...
-  const localVue = createLocalVue()
-  localVue.use(Vuex)
   let NuxtStore
   let store
 
