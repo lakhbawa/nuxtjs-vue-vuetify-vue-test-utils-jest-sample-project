@@ -1,4 +1,4 @@
-
+import constants from '~/tests/constants'
 const { Nuxt } = require('nuxt')
 // eslint-disable-next-line no-unused-vars,@typescript-eslint/no-unused-vars
 const request = require('supertest')
@@ -6,10 +6,9 @@ const request = require('supertest')
 // So we can close them at the end of the test
 let nuxt = null
 
-const buildDir = '.nuxt-build-jest'
 // Init Nuxt.js and create a server listening on localhost:4000
 beforeAll(async () => {
-  nuxt = new Nuxt({ buildDir })
+  nuxt = new Nuxt({ buildDir: constants.buildDir })
 
   await nuxt.server.listen()
 }, 300000)

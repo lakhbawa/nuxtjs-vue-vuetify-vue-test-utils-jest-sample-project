@@ -1,5 +1,5 @@
 import _ from 'lodash'
-const buildDir = '~/.nuxt-build-jest'
+import constants from '~/tests/constants'
 describe('store/movies', () => {
 // ----------------------------------------------------
 // focus on the code from here...
@@ -8,7 +8,7 @@ describe('store/movies', () => {
 
   beforeAll(async () => {
     // note the store will mutate across tests
-    const storePath = `${buildDir}/store.js`
+    const storePath = `${constants.buildDirRootPath}/store.js`
     NuxtStore = await import(storePath)
   })
 

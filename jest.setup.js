@@ -1,3 +1,4 @@
+import constants from './tests/constants'
 
 const { Nuxt, Builder } = require('nuxt')
 
@@ -36,8 +37,8 @@ const resetConfig = {
 // we take our nuxt config, lay the resets on top of it,
 // and lastly we apply the non-boolean overrides
 const finalConfig = Object.assign({}, nuxtConfig, resetConfig, {
-  server: { port: 3001 },
-  buildDir: '.nuxt-build-jest'
+  server: { port: constants.port },
+  buildDir: constants.buildDir
 })
 
 const buildNuxt = async () => {
