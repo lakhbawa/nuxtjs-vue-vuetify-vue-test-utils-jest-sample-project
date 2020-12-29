@@ -1,10 +1,7 @@
 <template>
-  <div class="VueToNuxtLogo">
-    <div class="Triangle Triangle--two" />
-    <div class="Triangle Triangle--one" />
-    <div class="Triangle Triangle--three" />
-    <div class="Triangle Triangle--four" />
-  </div>
+  <v-container>
+    <v-alert>Its Logo</v-alert>
+  </v-container>
 </template>
 
 <style>
