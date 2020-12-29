@@ -3,6 +3,9 @@
     <div>
       Global
       {{ $helpers.convertPoundsToKilograms(200) }}
+      <nuxt-link to="/auth/login">
+        Login
+      </nuxt-link>
     </div>
   </v-container>
 </template>
