@@ -1,27 +1,18 @@
 
-const { Nuxt, Builder } = require('nuxt')
-// eslint-disable-next-line no-unused-vars
+const { Nuxt } = require('nuxt')
+// eslint-disable-next-line no-unused-vars,@typescript-eslint/no-unused-vars
 const request = require('supertest')
-const nuxtConfig = require('../nuxt.config.js')
 // We keep the nuxt and server instance
 // So we can close them at the end of the test
 let nuxt = null
 
+let buildDir
 // Init Nuxt.js and create a server listening on localhost:4000
 beforeAll(async () => {
-  // const config = {
-  //   dev: process.env.NODE_ENV === 'production',
-  //   rootDir: resolve(__dirname, '../'),
-  //   mode: 'universal',
-  //   plugins,
-  //   modules
-  // }
+  buildDir = process.env.buildDir
+  nuxt = new Nuxt({ buildDir })
 
-  nuxt = new Nuxt({...nuxtConfig, server: { port: 3001}, buildDir: '.nuxt-build-jest'})
-
-  await new Builder(nuxt).build()
-
-  await nuxt.server.listen(3001, 'localhost')
+  await nuxt.server.listen()
 }, 300000)
 
 // Example of testing only generated html
