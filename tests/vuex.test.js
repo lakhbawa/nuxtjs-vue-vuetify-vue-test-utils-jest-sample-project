@@ -22,7 +22,7 @@ describe('store/movies', () => {
     let disney
 
     beforeEach(() => {
-      disney = store.getters['movies/disney']
+      disney = store.getters['test_store_movies/disney']
     })
 
     test('getter is a function', () => {
@@ -38,7 +38,7 @@ describe('store/movies', () => {
     let byStudio
 
     beforeEach(() => {
-      byStudio = store.getters['movies/byStudio']
+      byStudio = store.getters['test_store_movies/byStudio']
     })
 
     test('is a function', () => {
@@ -46,8 +46,8 @@ describe('store/movies', () => {
     })
 
     test('matches what the disney getter returns', () => {
-      const movies = store.getters['movies/byStudio']('Disney')
-      const disney = store.getters['movies/disney']
+      const movies = store.getters['test_store_movies/byStudio']('Disney')
+      const disney = store.getters['test_store_movies/disney']
       expect(movies).toEqual(disney)
     })
 
