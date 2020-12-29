@@ -50,6 +50,9 @@ export const bootstrapVueContext = (configureContext) => {
 
   jest.isolateModules(() => {
     context.vueTestUtils = require('@vue/test-utils')
+    context.vueTestUtils.config.stubs.nuxt = { template: '<div />' }
+    context.vueTestUtils.config.stubs['nuxt-link'] = { template: '<a><slot /></a>' }
+    context.vueTestUtils.config.stubs['no-ssr'] = { template: '<span><slot /></span>' }
     context.vue = context.vueTestUtils.createLocalVue()
 
     jest.doMock('vue', () => context.vue)
