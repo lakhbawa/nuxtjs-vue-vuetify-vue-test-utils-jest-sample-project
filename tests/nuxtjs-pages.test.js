@@ -6,10 +6,9 @@ const request = require('supertest')
 // So we can close them at the end of the test
 let nuxt = null
 
-let buildDir
+const buildDir = '.nuxt-build-jest'
 // Init Nuxt.js and create a server listening on localhost:4000
 beforeAll(async () => {
-  buildDir = process.env.buildDir
   nuxt = new Nuxt({ buildDir })
 
   await nuxt.server.listen()
