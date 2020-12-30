@@ -1,4 +1,4 @@
-import _ from 'lodash'
+import { isArray, isFunction} from 'lodash'
 import constants from '~/tests/constants'
 describe('store/movies', () => {
 // ----------------------------------------------------
@@ -26,7 +26,7 @@ describe('store/movies', () => {
     })
 
     test('getter is a function', () => {
-      expect(_.isArray(disney)).toBe(true)
+      expect(isArray(disney)).toBe(true)
     })
 
     test('should be 6 movies total', () => {
@@ -42,7 +42,7 @@ describe('store/movies', () => {
     })
 
     test('is a function', () => {
-      expect(_.isFunction(byStudio)).toBe(true)
+      expect(isFunction(byStudio)).toBe(true)
     })
 
     test('matches what the disney getter returns', () => {

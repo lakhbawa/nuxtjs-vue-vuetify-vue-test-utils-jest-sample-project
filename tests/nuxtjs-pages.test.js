@@ -12,7 +12,8 @@ let nuxt = null
 beforeAll(async () => {
   nuxt = new Nuxt({ ...nuxtConfig, buildDir: constants.buildDir })
 
-  await nuxt.server.listen()
+  await nuxt.server.listen(constants.port, 'localhost')
+
 }, 300000)
 
 // Example of testing only generated html
