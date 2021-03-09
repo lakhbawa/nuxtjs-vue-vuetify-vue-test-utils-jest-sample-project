@@ -38,7 +38,8 @@ const resetConfig = {
 // and lastly we apply the non-boolean overrides
 const finalConfig = Object.assign({}, nuxtConfig, resetConfig, {
   server: { port: constants.port },
-  buildDir: constants.buildDir
+  buildDir: constants.buildDir,
+  ignore: ["/components//", "/layouts//", "/pages//*"]
 })
 
 const buildNuxt = async () => {
