@@ -11,6 +11,9 @@
     "lint": "npm run lint:js",
     "test": "jest"
   },
+  "engines": {
+    "node": "^12.21.0"
+  },
   "dependencies": {
     "@nuxt/typescript-runtime": "^2.0.0",
     "@nuxtjs/axios": "^5.12.2",
