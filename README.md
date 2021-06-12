@@ -6,6 +6,10 @@ It can test server side rendering as well
 
 \$ make sure to add .nuxt-build-jest in your .gitignore file
 
+Full Tutorial:
+
+https://dev.to/bawa_geek/how-to-setup-jest-testing-in-nuxt-js-project-5c84
+
 ## Build Setup
 
 ```bash
