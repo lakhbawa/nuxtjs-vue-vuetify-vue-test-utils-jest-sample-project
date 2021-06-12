@@ -1,5 +1,6 @@
 module.exports = {
   globalSetup: '<rootDir>/jest.setup.js',
+  testEnvironment: 'node',
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
     '^~/(.*)$': '<rootDir>/$1',
