@@ -36,7 +36,7 @@ const resetConfig = {
 
 // we take our nuxt config, lay the resets on top of it,
 // and lastly we apply the non-boolean overrides
-const finalConfig = Object.assign({}, nuxtConfig, resetConfig, {
+const finalConfig = Object.assign({}, nuxtConfig.default, resetConfig, {
   server: { port: constants.port },
   buildDir: constants.buildDir,
   ignore: ["/components//", "/layouts//", "/pages//*"]
