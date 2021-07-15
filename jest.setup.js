@@ -16,7 +16,7 @@ const resetConfig = {
     store: true,
     layouts: false,
     meta: false,
-    middleware: false,
+    middleware: true,
     transitions: false,
     deprecations: false,
     validate: false,
