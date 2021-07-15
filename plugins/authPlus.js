@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-export default (context, inject) => {
+export default ({ $auth }, inject) => {
   const authObject = {
     // here is reason for this code duplication, please handle carefully
     getUser: () => $auth.user, // if we don't make if function, value will not change with state
@@ -16,7 +16,6 @@ export default (context, inject) => {
 
     }
   }
-  inject('authAdapter', authObject)
-  // inject('helpers', helpers)
+  inject('authPlus', authObject)
 
 }

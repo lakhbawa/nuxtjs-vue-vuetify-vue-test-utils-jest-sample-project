@@ -7,20 +7,31 @@ export default {
     title: 'game-store-fresh',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1'
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content: ''
+      }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon.ico'
+      }
     ]
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [
-  ],
+  css: [],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
+    // '@/plugins/helpers'
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -39,12 +50,52 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/auth-next'
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
 
+  auth: {
+    plugins: ['~/plugins/authPlus.js'],
+    redirect: {
+      login: process.env.APP_URL + '/auth/login',
+      logout: process.env.APP_URL,
+      callback: process.env.APP_URL + '/auth/login',
+      user: process.env.APP_URL,
+      home: '/'
+
+    },
+    strategies: {
+      laravelPassportPasswordGrant: {
+        name: 'laravelPassportPassword',
+        provider: 'laravel/passport',
+        url: 'http://127.0.0.1:8000',
+        endpoints: {
+
+          logout: {
+            method: 'post',
+            url: '/api/auth/logout'
+          },
+          user: {
+            url: '/api/auth/oauth_user',
+            method: 'get',
+            property: 'email'
+          }
+        },
+        token: {
+          maxAge: 1800
+        },
+        refreshToken: {
+          maxAge: 60 * 60 * 24 * 30
+        },
+        clientId: '2',
+        clientSecret: 'afVPTuW21z7k1sL8JnAOhWkibDBQwZzwRM1mvKJd',
+        grantType: 'password'
+      }
+    }
+  },
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
@@ -65,6 +116,5 @@ export default {
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {
-  }
+  build: {}
 }

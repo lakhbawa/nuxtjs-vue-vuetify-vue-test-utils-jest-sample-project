@@ -39,7 +39,7 @@ const resetConfig = {
 const finalConfig = Object.assign({}, nuxtConfig.default, resetConfig, {
   server: { port: constants.port },
   buildDir: constants.buildDir,
-  ignore: ["/components//", "/layouts//", "/pages//*"]
+  ignore: ['/components//', '/layouts//', '/pages//*']
 })
 
 const buildNuxt = async () => {

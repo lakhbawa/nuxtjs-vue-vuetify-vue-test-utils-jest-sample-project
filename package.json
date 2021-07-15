@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^2.0.0",
+    "@nuxtjs/auth-next": "5.0.0-1624817847.21691f1",
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/pwa": "^3.0.2",
     "core-js": "^3.6.5",
@@ -35,8 +36,8 @@
     "eslint": "^7.10.0",
     "eslint-plugin-nuxt": "^1.0.0",
     "jest": "^26.5.0",
+    "supertest": "^6.0.1",
     "ts-jest": "^26.4.1",
-    "vue-jest": "^3.0.4",
-    "supertest": "^6.0.1"
+    "vue-jest": "^3.0.4"
   }
 }

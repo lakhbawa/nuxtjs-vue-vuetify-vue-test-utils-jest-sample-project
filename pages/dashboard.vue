@@ -6,17 +6,17 @@ export default {
       required: false,
       default () {
         return {}
-      }
-    }
+      },
+    },
   },
   data () {
     return {}
   },
 
-  methods: {}
+  methods: {},
 }
 </script>
 <template>
-  <div>Homepage</div>
+  <div>Dashboard</div>
 </template>
 <style lang="scss" scoped></style>
