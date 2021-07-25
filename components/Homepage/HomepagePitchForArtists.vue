@@ -8,6 +8,6 @@ export default {
 }
 </script>
 <template>
-  <div>artists steps</div>
+  <div>Pitch for artists</div>
 </template>
 <style lang="scss" scoped></style>
