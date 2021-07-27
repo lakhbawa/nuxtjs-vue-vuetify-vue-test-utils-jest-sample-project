@@ -335,9 +335,33 @@ export default Vue.extend({
           <v-btn text style="font-weight: normal">
             Casting Calls
           </v-btn>
-          <v-btn text style="font-weight: normal">
-            Find Talent
-          </v-btn>
+
+          <v-menu offset-y open-on-hover>
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn
+                class="black--text"
+                dark
+                v-bind="attrs"
+                text
+                to="/find-talent"
+                style="font-weight: normal"
+                v-on="on"
+              >
+                Find Talent
+                <v-icon>mdi-chevron-down</v-icon>
+              </v-btn>
+            </template>
+            <v-list>
+              <v-list-item
+                v-for="(item, index) in findTalentSubPages.general"
+                :key="index"
+                :to="item.uri"
+              >
+                <v-list-item-title>{{ item.title }}</v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-menu>
+
           <v-btn text style="font-weight: normal">
             Casting Director <v-icon>mdi-chevron-down</v-icon>
           </v-btn>
