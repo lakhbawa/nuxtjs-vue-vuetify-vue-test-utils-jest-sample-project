@@ -11,7 +11,7 @@ export default {
 </script>
 <template>
   <div
-    style="background-image: url('/images/homepage/hero-bg.png');background-size: cover;background-position: center center;height: 700px"
+    style="background-image: url('/images/homepage/hero-bg.png');background-size: cover;background-position: center center;height: 650px"
   >
     <v-container>
       <v-row style="height: 650px">
@@ -52,7 +52,7 @@ export default {
         </v-col>
       </v-row>
     </v-container>
-    <v-row style="margin-top: 0;padding-right: 10px">
+    <v-row style="margin-top: -3rem;padding-right: 10px">
       <v-col cols="0" md="6" />
       <v-col class="text-right" style="background-color: #eeeeee">
         <v-row>

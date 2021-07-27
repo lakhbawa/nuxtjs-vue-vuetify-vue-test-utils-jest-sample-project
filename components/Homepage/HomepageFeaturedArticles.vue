@@ -86,7 +86,7 @@ export default {
               <h3>Follow us:</h3>
             </v-col>
             <v-col>
-              <v-row class="flex-space-between">
+              <v-row class="">
                 <v-col>
                   <v-btn icon color="primary">
                     <v-icon large>
