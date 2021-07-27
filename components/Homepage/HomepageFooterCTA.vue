@@ -11,7 +11,7 @@ export default {
   <div class="primary" style="margin-top: 8rem;position: relative">
     <v-container>
       <v-row>
-        <v-col cols="0" sm="4" style="margin-top: -5rem;flex-grow: 0">
+        <v-col class="d-none d-sm-block" cols="0" sm="4" style="margin-top: -5rem;flex-grow: 0">
           <v-img
             contain
             height="350"
@@ -34,9 +34,9 @@ export default {
         </v-col>
       </v-row>
     </v-container>
-        <v-img src="/images/homepage/vector1.svg" style="position: absolute;top:1px;left:1px;opacity: 0.5"></v-img>
+    <v-img class="d-none d-sm-block" src="/images/homepage/vector1.svg" style="position: absolute;top:1px;left:1px;opacity: 0.5"></v-img>
 
-    <v-img src="/images/homepage/vector.svg" style="position: absolute;bottom:1px;right:1px;opacity: 0.5"></v-img>
+    <v-img class="d-none d-sm-block" src="/images/homepage/vector.svg" style="position: absolute;bottom:1px;right:1px;opacity: 0.5"></v-img>
   </div>
 </template>
 <style lang="scss" scoped></style>

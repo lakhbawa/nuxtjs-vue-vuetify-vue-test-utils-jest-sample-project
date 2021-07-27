@@ -113,7 +113,7 @@ export default {
   <div>
     <div class="py-7" style="background-image: url(/images/homepage/footer-drawing.svg);background-position: center center;background-size: cover;">
       <v-container>
-        <v-row class="text-center text-sm-left">
+        <v-row class="text-sm-left">
           <v-col cols="12" sm="3" class="px-2">
             <v-img height="55" max-width="200" contain src="/logo.svg" />
             <p>
@@ -124,22 +124,22 @@ export default {
             </p>
             <v-row>
               <v-col>
-                <v-icon large>
+                <v-icon large color="primary">
                   mdi-facebook
                 </v-icon>
               </v-col>
               <v-col>
-                <v-icon large>
+                <v-icon large color="primary">
                   mdi-twitter
                 </v-icon>
               </v-col>
               <v-col>
-                <v-icon large>
+                <v-icon large color="primary">
                   mdi-youtube
                 </v-icon>
               </v-col>
               <v-col>
-                <v-icon large>
+                <v-icon large color="primary">
                   mdi-instagram
                 </v-icon>
               </v-col>
