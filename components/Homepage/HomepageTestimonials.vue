@@ -9,7 +9,7 @@ export default {
 </script>
 <template>
   <v-container>
-    <div class="text-center my-5">
+    <div class="text-center my-1">
       <h1>
         What they say about us
       </h1>
@@ -19,7 +19,7 @@ export default {
     </div>
 
     <v-row>
-      <v-col sm="3" class="text-center">
+      <v-col sm="3" style="min-height: 400px" class="d-none d-sm-block text-center">
         <div class="testimonial-cloud-left" style="position: relative;height: 100%;">
           <v-avatar style="position:absolute;top: 1rem;right: 10%;border: 5px solid #eaeaea" size="96">
             <v-img src="https://uifaces.co/our-content/donated/1H_7AxP0.jpg" width="96" height="96" contain />
@@ -33,25 +33,27 @@ export default {
         </div>
       </v-col>
       <v-col class="text-center" style="">
-        <div class="testimonial-content text-center" style="margin: auto;height: 405px; width: 450px;padding:5rem  0;text-align:center;background-color:#eaeaea; clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);">
+        <div class="testimonial-content text-center" style="margin: auto;height: 324px; width: 360px;padding:3rem  0;text-align:center;background-color:#eaeaea; clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);">
           <v-avatar style="border: 5px solid #ffffff" size="96">
             <v-img src="https://uifaces.co/our-content/donated/1H_7AxP0.jpg" width="96" height="96" contain />
           </v-avatar>
-          <h4 class="my-3">
+          <h5 class="my-3">
             Great Platform for Casting Directors
-          </h4>
-          <p style="max-width: 250px;margin: auto">
-            Castkro is perfect platform to find the models. We found the match for our role requirements within few days
-          </p>
-          <h4 class="mt-3">
+          </h5>
+          <div style="max-width: 250px;margin: auto">
+            <small>
+              Castkro is perfect platform to find the models. We found the match for our role requirements within few days
+            </small>
+          </div>
+          <h5 class="mt-3">
             Mp3 Entertainment, Chandigarh
-          </h4>
+          </h5>
           <p>
             Talent Management Agency
           </p>
         </div>
       </v-col>
-      <v-col sm="3" class="text-center">
+      <v-col sm="3" style="min-height: 400px" class="text-center d-none d-sm-block ">
         <div class="testimonial-cloud-right" style="position: relative;height: 100%;">
           <v-avatar style="position:absolute;top: 1rem;right: 10%;border: 5px solid #eaeaea" size="96">
             <v-img src="https://uifaces.co/our-content/donated/1H_7AxP0.jpg" width="96" height="96" contain />

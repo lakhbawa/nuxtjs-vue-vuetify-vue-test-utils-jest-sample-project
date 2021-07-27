@@ -66,14 +66,14 @@ export default {
 </script>
 <template>
   <v-container>
-    <v-row class="my-4">
-      <v-col>
+    <v-row class="my-1">
+      <v-col cols="12" sm="7">
         <h1>
           100s of Casting Calls are posted daily
         </h1>
       </v-col>
-      <v-col style="flex-grow: 0">
-        <v-btn color="secondary" large rounded>
+      <v-col cols="12" sm="5" style="flex-grow: 0" class="text-sm-right">
+        <v-btn color="primary" large outlined rounded>
           Post free casting call
         </v-btn>
       </v-col>
@@ -83,20 +83,20 @@ export default {
     </p>
     <div>
       <div class="text-center my-8">
-        <v-btn v-for="castingCallType in castingCallTypes" :key="castingCallType.title" class="mr-2" outlined rounded>
+        <v-btn v-for="castingCallType in castingCallTypes" :key="castingCallType.title"  class="mr-3 mb-3 mb-sm-0" outlined rounded>
           {{ castingCallType.title }}
         </v-btn>
       </div>
       <v-row>
         <v-col v-for="castingCall in castingCalls" :key="castingCall.id" cols="12" sm="6">
-          <v-card class="py-4" style="border-left: 5px solid #ff6b6b">
+          <v-card class="py-1" style="border-left: 5px solid #ff6b6b">
             <v-card-text>
               <v-row>
                 <v-col style="flex-grow: 0">
                   <v-img width="64" height="64" :src="castingCall.image" />
                 </v-col>
                 <v-col>
-                  <h3 class="py-2">
+                  <h3 class="py-sm-2">
                     {{ castingCall.title }}
                   </h3>
                   <div>
@@ -104,7 +104,7 @@ export default {
                     <v-icon>mdi-video-outline</v-icon>&nbsp;{{ castingCall.productionTypes[0].title }}
                   </div>
                 </v-col>
-                <v-col style="flex-grow: 0">
+                <v-col cols="12" sm="4" class="text-right" style="flex-grow: 0">
                   <v-btn color="secondary">
                     Apply
                   </v-btn>

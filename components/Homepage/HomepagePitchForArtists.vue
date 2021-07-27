@@ -61,7 +61,7 @@ export default {
           <h3 class="mt-4 mb-2 font-weight-medium">
             Casting Call Categories:
           </h3>
-          <v-btn v-for="(castingCallCategory,index) in castingCallCategories" :key="index" rounded outlined class="mr-3">
+          <v-btn v-for="(castingCallCategory,index) in castingCallCategories" :key="index" rounded outlined class="mr-3 mb-3 mb-sm-0">
             {{ castingCallCategory.title }}
           </v-btn>
         </v-col>

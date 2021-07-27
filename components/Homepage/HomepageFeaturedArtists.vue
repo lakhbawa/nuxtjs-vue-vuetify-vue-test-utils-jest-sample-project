@@ -78,14 +78,14 @@ export default {
 </script>
 <template>
   <v-container style="">
-    <v-row class="my-4">
-      <v-col>
+    <v-row class="my-1 text-sm-left">
+      <v-col cols="12" sm="7">
         <h1>
           Find and Cast the Perfect Artists for you requirement
         </h1>
       </v-col>
-      <v-col style="flex-grow: 0">
-        <v-btn color="secondary" large rounded outlined>
+      <v-col cols="12" sm="5" style="flex-grow: 0" class="text-sm-right">
+        <v-btn color="primary" large rounded outlined>
           Create Free Profile
         </v-btn>
       </v-col>
@@ -94,8 +94,8 @@ export default {
     <p>
       Search and Filter the Database of thousands of actors, models etc
     </p>
-    <v-row class="">
-      <v-col cols="12" sm="3">
+    <v-row>
+      <v-col cols="12" sm="3" class="text-center text-sm-left">
         <v-btn rounded color="secondary" large width="250" class="mb-4">
           Find Models
         </v-btn>
@@ -116,7 +116,7 @@ export default {
         <v-row>
           <v-col v-for="profile in profiles" :key="profile.id" cols="12" sm="4">
             <template>
-              <v-card class="mx-auto" max-width="344">
+              <v-card class="" max-width="344">
                 <nuxt-link :to="'/artist/'+profile.id">
                   <div style="position: relative">
                     <v-img
@@ -137,7 +137,7 @@ export default {
                 <v-card-text>
                   <div
                     v-if="true"
-                    class="text-right"
+                    class="text-left"
                     style="font-size: 0.95rem"
                   >
                     <v-chip-group
@@ -157,22 +157,22 @@ export default {
                     </v-chip-group>
                   </div>
 
-                  <v-row class="columns is-mobile font-weight-medium" no-gutters>
+                  <v-row class="font-weight-medium" no-gutters>
                     <v-col class="column" cols="8">
                       <nuxt-link
                         :to="'/artist/' + parseInt(profile.id)"
                         class="font-weight-medium"
-                        style="font-weight: 600"
+                        style="font-weight: 600;text-decoration: none"
                       >
-                        <strong style="text-decoration: none">{{ profile.name }}</strong>
+                        <strong style="">{{ profile.name }}</strong>
                       </nuxt-link>
                     </v-col>
                     <v-col class="column text-right is-narrow">
-                      <v-icon>mdi-bookmark-outline</v-icon>
+                      <v-btn icon><v-icon>mdi-bookmark-outline</v-icon></v-btn>
                     </v-col>
                   </v-row>
-                  <div class="my-2">
-                    <div class="profile__info worker__quick_bar" style="">
+                  <div class="my-1">
+                    <div class="profile__info worker__quick_bar" style="font-weight: 500">
                       <v-icon>mdi-human-male-height</v-icon>
                       <span v-if="profile.height">
                         {{ profile.height }} </span><span v-else> - </span>

@@ -113,9 +113,9 @@ export default {
   <div>
     <div class="py-7" style="background-image: url(/images/homepage/footer-drawing.svg);background-position: center center;background-size: cover;">
       <v-container>
-        <v-row>
-          <v-col sm="3" class="px-2">
-            <v-img src="/logo.svg" />
+        <v-row class="text-center text-sm-left">
+          <v-col cols="12" sm="3" class="px-2">
+            <v-img height="55" max-width="200" contain src="/logo.svg" />
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur cumque cupiditate ipsum laborum
             </p>
@@ -145,7 +145,7 @@ export default {
               </v-col>
             </v-row>
           </v-col>
-          <v-col sm="3" class="px-2">
+          <v-col sm="3" cols="12" class="px-2">
             <div class="footer-section-headline">
               Job Categories
             </div>
@@ -162,9 +162,9 @@ export default {
               Film Auditions
             </div>
           </v-col>
-          <v-col sm="3" class="px-2">
+          <v-col sm="3" cols="12" class="px-2">
             <div class="footer-section-headline">
-              Job Categories
+              Talent Categories
             </div>
             <div class="footer-section-link">
               Modeling Jobs
@@ -179,7 +179,7 @@ export default {
               Film Auditions
             </div>
           </v-col>
-          <v-col sm="3" class="px-2">
+          <v-col sm="3" cols="12" class="px-2">
             <div class="footer-section-headline">
               Job Categories
             </div>
@@ -202,16 +202,18 @@ export default {
     <div style="background-color: #eeeeee">
       <v-container>
         <v-row>
-          <v-col>
+          <v-col cols="12" sm="3">
             2021 @ All Rights Reserved - Castkro Talent Hunt
           </v-col>
-          <v-col>
+          <v-col cols="6" sm="3">
             Terms of Service
           </v-col>
-          <v-col>
+          <v-col cols="6" sm="3">
             Terms of Service
           </v-col>
-          <v-col>Developed with ❤ in India</v-col>
+          <v-col cols="12" sm="3">
+            Developed with ❤ in India
+          </v-col>
         </v-row>
       </v-container>
     </div>
